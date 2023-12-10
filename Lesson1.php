@@ -1,3 +1,12 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Arlie Damian</h1>
 <?php
         //Functions
         print("<br><br>Functions<br>");
@@ -44,10 +53,8 @@
         }
         keep_track();
         keep_track();
-        keep_track();
-        
-
-        print "ARLIE PANGET";
-        print "OK NA";
-        
+        keep_track();      
     ?>
+</body>
+</html>
+
