@@ -1,0 +1,37 @@
+./mysql -u root
+
+CREATE DATABASE StudentRecord;
+
+CREATE TABLE student (
+    StudentID int NOT NULL,
+    FirstName varchar(150) NOT NULL,
+    LastName varchar(150) NOT NULL,
+    DateOfBirth varchar (150) NOT NULL,
+    Email varchar (150) NOT NULL,
+    PhoneNo int NOT NULL,
+    PRIMARY KEY(StudentID)
+);
+
+CREATE TABLE Course (
+    CourseID int NOT NULL,
+    CourseName varchar(150) NOT NULL,
+    Credits int,
+    PRIMARY KEY (CourseID)
+);
+
+CREATE TABLE student (
+    InstructorID int NOT NULL,
+    FirstName varchar(150) NOT NULL,
+    LastName varchar(150) NOT NULL,
+    Email varchar (150) NOT NULL,
+    PhoneNo varchar (150) NOT NULL,
+    PRIMARY KEY(StudentID)
+);
+
+CREATE TABLE Enrollment (
+    EnrollmentID int NOT NULL,
+    Enrollmentdate varchar (150) NOT NULL,
+    Grade int NOT NULL,
+    FOREIGN KEY (StudentID) REFERENCES student(StudentID),
+    FOREIGN KEY (CourseID) REFERENCES Course(CourseID)
+);
